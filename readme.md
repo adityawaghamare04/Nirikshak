@@ -154,8 +154,8 @@ FLASK_PORT=5000
 FLASK_DEBUG=False
 
 # Firebase Realtime Database
-FIREBASE_URL=https://nirikshak-project-default-rtdb.firebaseio.com/
-SOURCE_FIREBASE_URL=https://dht11-4ed11-default-rtdb.asia-southeast1.firebasedatabase.app/
+FIREBASE_URL=
+SOURCE_FIREBASE_URL=
 ```
 
 ### 3. Training & Evaluation (Optional)

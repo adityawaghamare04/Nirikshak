@@ -57,11 +57,3 @@ FIREBASE_URL  = os.environ.get("FIREBASE_URL", "https://nirikshak-project-defaul
 
 # --- Firebase Source Ingestion Database URL ---
 SOURCE_FIREBASE_URL = os.environ.get("SOURCE_FIREBASE_URL", "https://dht11-4ed11-default-rtdb.asia-southeast1.firebasedatabase.app/")
-
-# --- Twilio SMS Alert Config ---
-# Configure these variables in your local .env file or host environment variables
-TWILIO_ACCOUNT_SID = os.environ.get("TWILIO_ACCOUNT_SID", "YOUR_TWILIO_ACCOUNT_SID")
-TWILIO_AUTH_TOKEN  = os.environ.get("TWILIO_AUTH_TOKEN", "YOUR_TWILIO_AUTH_TOKEN")
-TWILIO_FROM_NUMBER = os.environ.get("TWILIO_FROM_NUMBER", "+1XXXXXXXXXX")
-TWILIO_TO_NUMBER   = os.environ.get("TWILIO_TO_NUMBER", "+1XXXXXXXXXX")
-SMS_ALERT_COOLDOWN = int(os.environ.get("SMS_ALERT_COOLDOWN", "300"))

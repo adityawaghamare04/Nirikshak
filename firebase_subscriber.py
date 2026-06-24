@@ -75,13 +75,6 @@ def start():
                     # Stage C: Sequential 3-stage ML inference
                     res = model.predict(reading)
                     
-                    # Trigger SMS Alert if anomaly detected (with built-in cooldown checking)
-                    try:
-                        from utils.alerts import trigger_anomaly_alert
-                        trigger_anomaly_alert(res)
-                    except Exception as alert_err:
-                        print(f"[Firebase Subscriber] Alert trigger failed: {alert_err}", flush=True)
-                    
                     # Stage D: Output Routing & Delivery
                     record_id = f"rec_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{idx:05d}"
                     

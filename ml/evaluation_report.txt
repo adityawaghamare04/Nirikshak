@@ -1,0 +1,49 @@
+============================================================
+  NIRIKSHAK ML PIPELINE EVALUATION REPORT
+============================================================
+Date: 2026-06-18 23:49:30
+
+STAGE 1: ANOMALY DETECTION (Isolation Forest)
+---------------------------------------------
+Accuracy vs Labeled Faults: 86.58%
+F1-Score (Anomaly class):   0.5438
+Anomaly Score Bounds:        Min=0.3291, Max=0.7817
+Anomaly Threshold (default): 0.50 (where score_samples < -0.5)
+
+STAGE 2: FAULT CLASSIFICATION (Random Forest Classifier)
+---------------------------------------------
+Test Set Accuracy:   97.95%
+Weighted F1 Score:   0.9789
+
+Classification Report:
+                  precision    recall  f1-score   support
+
+   Bearing Fault       1.00      0.86      0.92        63
+Electrical Fault       1.00      0.88      0.94        66
+         Healthy       0.98      1.00      0.99      1571
+    Misalignment       0.98      0.91      0.94        53
+     Overheating       0.82      0.68      0.74        34
+     Rotor Fault       0.98      0.97      0.97       144
+       Unbalance       0.91      0.97      0.94        69
+
+        accuracy                           0.98      2000
+       macro avg       0.95      0.89      0.92      2000
+    weighted avg       0.98      0.98      0.98      2000
+
+Confusion Matrix:
+                      Bearing Fa  Electrical     Healthy  Misalignme  Overheatin  Rotor Faul   Unbalance
+Bearing Fault                 54           0           4           0           0           0           5
+Electrical Fault               0          58           4           0           4           0           0
+Healthy                        0           0        1570           0           1           0           0
+Misalignment                   0           0           0          48           0           3           2
+Overheating                    0           0          11           0          23           0           0
+Rotor Fault                    0           0           4           1           0         139           0
+Unbalance                      0           0           2           0           0           0          67
+
+
+STAGE 3: REMAINING USEFUL LIFE (Random Forest Regressor)
+---------------------------------------------
+Root Mean Squared Error (RMSE): 4.52 hours
+Mean Absolute Error (MAE):      1.23 hours
+R-squared (R2) Score:           0.9973
+============================================================

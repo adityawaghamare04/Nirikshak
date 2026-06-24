@@ -1,4 +1,4 @@
-# Nirikshak - IoT-Based Predictive Maintenance Platform
+# Nirikshak -Predictive Maintenance Platform
 
 Nirikshak is an advanced, production-grade Industrial Internet of Things (IIoT) predictive maintenance system designed to monitor, clean, analyze, and forecast the health of rotating machinery (e.g. industrial motor drives). 
 
